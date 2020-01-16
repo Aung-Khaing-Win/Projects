@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="10.5">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Project 4-1\Alteryx Workflows\Model_Creditworthiness.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Model_Creditworthiness.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Name" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Object" size="2147483647" source="R-DATA:SERIAL" type="Blob" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>customers-to-score (1).xlsx
+Table=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Account-Balance" size="255" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="V_String" />
+            <Field name="Duration-of-Credit-Month" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="Double" />
+            <Field name="Payment-Status-of-Previous-Credit" size="255" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="V_String" />
+            <Field name="Purpose" size="255" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="V_String" />
+            <Field name="Credit-Amount" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="Double" />
+            <Field name="Value-Savings-Stocks" size="255" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="V_String" />
+            <Field name="Length-of-current-employment" size="255" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="V_String" />
+            <Field name="Instalment-per-cent" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="Double" />
+            <Field name="Guarantors" size="255" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="V_String" />
+            <Field name="Duration-in-Current-address" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="Double" />
+            <Field name="Most-valuable-available-asset" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="Double" />
+            <Field name="Age-years" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="Double" />
+            <Field name="Concurrent-Credits" size="255" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="V_String" />
+            <Field name="Type-of-apartment" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="Double" />
+            <Field name="No-of-Credits-at-this-Bank" size="255" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="V_String" />
+            <Field name="Occupation" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="Double" />
+            <Field name="No-of-dependents" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="Double" />
+            <Field name="Telephone" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="Double" />
+            <Field name="Foreign-Worker" source="File: C:\Project 4-1\Datasets\customers-to-score (1).xlsx|`Sheet1$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings>
+        <Position x="162" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="score field">Score</Value>
+          <Value name="is oversampled">False</Value>
+          <Value name="oversampled value" />
+          <Value name="original percent">2.0</Value>
+          <Value name="log y">False</Value>
+          <Value name="prediction.interval">False</Value>
+          <Value name="interval.level">95</Value>
+          <Value name="append.xdf">False</Value>
+          <Value name="num.records">256000</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Account.Balance" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Duration.of.Credit.Month" source="R-DATA:" type="Double" />
+            <Field name="Payment.Status.of.Previous.Credit" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Purpose" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Credit.Amount" source="R-DATA:" type="Double" />
+            <Field name="Value.Savings.Stocks" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Length.of.current.employment" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Instalment.per.cent" source="R-DATA:" type="Double" />
+            <Field name="Guarantors" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Duration.in.Current.address" source="R-DATA:" type="Double" />
+            <Field name="Most.valuable.available.asset" source="R-DATA:" type="Double" />
+            <Field name="Age.years" source="R-DATA:" type="Double" />
+            <Field name="Concurrent.Credits" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Type.of.apartment" source="R-DATA:" type="Double" />
+            <Field name="No.of.Credits.at.this.Bank" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Occupation" source="R-DATA:" type="Double" />
+            <Field name="No.of.dependents" source="R-DATA:" type="Double" />
+            <Field name="Telephone" source="R-DATA:" type="Double" />
+            <Field name="Foreign.Worker" source="R-DATA:" type="Double" />
+            <Field name="Score_Creditworthy" source="R-DATA:" type="Double" />
+            <Field name="Score_Non-Creditworthy" source="R-DATA:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Score.yxmc" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="258" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField field="Score_Creditworthy" type="Double" size="8" expression="IF [Score_Creditworthy] &gt; [Score_Non-Creditworthy]&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" />
+            <FormulaField field="Score_Non-Creditworthy" type="Double" size="8" expression="IF [Score_Non-Creditworthy] &gt; [Score_Creditworthy]&#xA;THEN 1&#xA;ELSE 0&#xA;ENDIF" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Score_Creditworthy=IF [Score_Creditworthy] &gt; [Score_Non-Credi...
+Score_Non-Creditworthy=IF [Score_Non-Creditworthy] &gt; [Score_C...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Right Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Left Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>ScoreingCustomersApplications</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
